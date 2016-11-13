@@ -2,7 +2,7 @@
 
 ##### Here are the code samples and exercises used in the meetup
 
-*To run the code, run `npm start` from the root directory of the repo. Open http://localhost:3000 to view it in the browser.*
+*To run the code, run `npm start` from the root directory of the repo. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.*
 
 
 The repo is structured as below:
