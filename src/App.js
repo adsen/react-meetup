@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import HelloWorld from './components/HelloWorld';
 import SortNames from './components/SortNames';
 import Counter from './components/Counter';
-import MultiCounterStateful from './components/MultiCounterStateful';
+import MultiCounter from './components/MultiCounter';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -14,8 +15,8 @@ class App extends Component {
         <SortNames />
         <br/><em>Counter:</em><br/>
         <Counter />
-        <br/><em>MultiCounterStateful:</em><br/>
-        <MultiCounterStateful />
+        <br/><em>MultiCounter:</em><br/>
+        <MultiCounter />
       </div>
     );
   }
