@@ -1,11 +1,15 @@
-import React from 'react';
+var React = require('react');
 
-export default class HelloWorld extends React.Component {
-  state = {name: ''};
-  handleChange = (event) => {
+var HelloWorld = React.createClass({
+  getInitialState: function() {
+    return {name: ''};
+  },
+
+  handleChange: function(event) {
     this.setState({name: event.target.value});
-  };
-  render () {
+  },
+
+  render: function() {
     return (
       <div>
         <h3>Hello{this.state.name ? ' '+this.state.name : ''}, Welcome to React!</h3>
@@ -13,4 +17,6 @@ export default class HelloWorld extends React.Component {
       </div>
     );
   }
-}
+});
+
+module.exports = HelloWorld;

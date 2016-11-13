@@ -1,29 +1,36 @@
-import React from 'react';
+var React = require('react');
 
-export default class SortNames extends React.Component {
+var SortNames = React.createClass({
 
-  state = {names: ['','','']};
+  getInitialState: function() {
+    return {names: ['','','']};
+  },
 
-  handleChange = (event, index) => {
+  handleChange: function(event, index) {
     let names = this.state.names;
     names[index] = event.target.value;
     this.setState({names: names});
-  };
+  },
 
-  getSortedNames() {
-      let nonEmptyNames = this.state.names.slice(0).filter( n => !!n);
+  getSortedNames: function() {
+      let nonEmptyNames = this.state.names.slice(0).filter(function(n) { return !!n; });
       return nonEmptyNames.sort().join(', ');
-  }
+  },
 
-  render () {
+  render: function() {
     return (
       <div>
         {
-          this.state.names.map((name, i) => <input key={i} type="text" value={name} placeholder="Name" onChange={(e) => this.handleChange(e, i)}/>)           }
+          this.state.names.map(function(name, i){
+            return <input key={i} type="text" value={name} placeholder="Name" onChange={(e) => this.handleChange(e, i)}/>;
+          })
+        }
         <br/><br/><div>
           Names in alphabetical order: {this.getSortedNames()}
         </div>
       </div>
     );
   }
-}
+});
+
+module.exports = SortNames;

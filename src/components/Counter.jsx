@@ -1,9 +1,11 @@
-import React from 'react';
+var React = require('react');
 
-export default class Counter extends React.Component {
-  state = {count: 0};
+var Counter = React.createClass({
+  getInitialState: function() {
+    return {count: 0};
+  },
 
-  render () {
+  render: function() {
     return (
       <div>
         <h3>Count: {this.state.count}</h3>
@@ -11,7 +13,9 @@ export default class Counter extends React.Component {
         <button onClick={this.onDec}>-</button>
       </div>
     );
-  }
-  onInc = () => this.setState({count: this.state.count + 1});
-  onDec = () => this.setState({count: this.state.count - 1});
-}
+  },
+  onInc: function () { this.setState({count: this.state.count + 1}) },
+  onDec: function () { this.setState({count: this.state.count - 1}) }
+});
+
+module.exports = Counter;

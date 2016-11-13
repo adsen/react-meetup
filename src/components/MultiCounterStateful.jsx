@@ -1,9 +1,11 @@
-import React from 'react';
+var React = require('react');
 
-class Counter extends React.Component {
-  state = {value: 0};
+var Counter = React.createClass({
+  getInitialState: function() {
+    return {value: 0};
+  },
 
-  render () {
+  render: function() {
     return (
       <div>
         <h3>Count: {this.state.value}</h3>
@@ -11,30 +13,34 @@ class Counter extends React.Component {
         <button onClick={this.onDec}>-</button>
       </div>
     );
-  }
-  onInc = () => this.setState({value: this.state.value + 1});
-  onDec = () => this.setState({value: this.state.value - 1});
-}
+  },
+  onInc: function () { this.setState({value: this.state.value + 1}) },
+  onDec: function () { this.setState({value: this.state.value - 1}) }
+});
 
-export default class MultiCounterStateful extends React.Component {
-  state = {counters: 0};
-  onCountChange(index, val) {
-    let counts = this.state.counts;
-    counts[index] += val;
-    this.setState({counts});
-   };
+var MultiCounterStateful = React.createClass({
+  getInitialState: function() {
+    return {counters: 0};
+  },
 
-  render() {
-    let counterElems = [];
-    for (let i = 0; i<this.state.counters; i++) {
+  onAddCounter: function(index, val) {
+    var counters = this.state.counters;
+    this.setState({counters: counters+1});
+   },
+
+  render: function() {
+    var counterElems = [];
+    for (var i = 0; i<this.state.counters; i++) {
       counterElems.push(<Counter key={i}/>);
     }
     return <div>
       {counterElems}
       <button
-        onClick={() => this.setState({counters: this.state.counters+1})} >
+        onClick={this.onAddCounter} >
         Add Counter
       </button>
     </div>;
   }
-}
+});
+
+module.exports = MultiCounterStateful;
