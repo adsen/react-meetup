@@ -23,7 +23,7 @@ export default class Container extends React.Component {
   render() {
     return <div>
       {this.state.counts.map((count, index) =>
-      <Counter count={count}
+      <Counter count={count} key={index}
         onInc={() => this.onCountChange(index, 1)}
         onDec={() => this.onCountChange(index, -1)}/> )}
       <button
