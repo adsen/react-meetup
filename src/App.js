@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -15,26 +16,26 @@ class App extends Component {
   render() {
     return (
       <Tabs>
-        <TabList>
-          <Tab>Hello World</Tab>
-          <Tab>Counter</Tab>
-          <Tab>Multiple Counter</Tab>
-          <Tab>Name Sorter</Tab>
+        <TabList className='app-tablist'>
+          <Tab className='app-tab'>Hello World</Tab>
+          <Tab className='app-tab'>Counter</Tab>
+          <Tab className='app-tab'>Multiple Counter</Tab>
+          <Tab className='app-tab'>Name Sorter</Tab>
         </TabList>
 
-        <TabPanel>
+        <TabPanel className='app-tab-panel'>
           <HelloWorld/>
         </TabPanel>
 
-        <TabPanel>
+        <TabPanel className='app-tab-panel'>
           <Counter/>
         </TabPanel>
 
-        <TabPanel>
+        <TabPanel className='app-tab-panel'>
           <MultiCounter/>
         </TabPanel>
 
-        <TabPanel>
+        <TabPanel className='app-tab-panel'>
           <SortNames/>
         </TabPanel>
 
