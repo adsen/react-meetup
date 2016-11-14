@@ -26,10 +26,12 @@ export default class Container extends React.Component {
       <Counter count={count} key={index}
         onInc={() => this.onCountChange(index, 1)}
         onDec={() => this.onCountChange(index, -1)}/> )}
-      <button
-        onClick={() => this.setState({counts: [...this.state.counts, 0]})} >
-        Add Counter
-      </button>
+      <div style={{borderTop: '2px solid #ccc', padding: '10px 0px'}}>
+        <button
+          onClick={() => this.setState({counts: [...this.state.counts, 0]})} >
+          Add Counter
+        </button>
+      </div>
     </div>;
   }
 }

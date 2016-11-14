@@ -31,10 +31,12 @@ export default class MultiCounterStateful extends React.Component {
     }
     return <div>
       {counterElems}
-      <button
-        onClick={() => this.setState({counters: this.state.counters+1})} >
-        Add Counter
-      </button>
+      <div style={{borderTop: '2px solid #ccc'}}>
+        <button
+          onClick={() => this.setState({counters: this.state.counters+1})} >
+          Add Counter
+        </button>
+      </div>
     </div>;
   }
 }
