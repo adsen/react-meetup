@@ -1,24 +1,49 @@
-.App {
-  text-align: center;
+.ReactTabs__TabList[role=tablist].app-tablist {
+  background-color: #eee;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.ReactTabs__Tab[role=tab].app-tab {
+  padding: 10px 20px;
+  color: #777;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.ReactTabs__Tab[role=tab].app-tab:hover, .ReactTabs__Tab[role=tab].app-tab:focus, .ReactTabs__Tab[role=tab].app-tab:active, .ReactTabs__Tab.app-tab[role=tab][aria-selected=true]{
+  color: #000;
 }
-
-.App-intro {
-  font-size: large;
+.app-tab-panel  {
+  padding: 10px 20px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.app-tab-panel input  {
+  height: 20px;
+    width: 200px;
+    font-size: 16px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    border-color: #ddd;
+    color: #777;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.app-tab-panel input:focus, .app-tab-panel input:active {
+  border-color: #00aaff;
+  color: #000;
+}
+.app-tab-panel button {
+  height: 30px;
+  min-width: 30px;
+    font-size: 15px;
+    padding: 5px 8px;
+    border-radius: 2px;
+    border-color: #ddd;
+    color: #555;
+    background-color: #e5e5e5;
+    margin-right: 15px;
+    margin-bottom: 22px;
+}
+.app-tab-panel button:focus, .app-tab-panel button:active, .app-tab-panel button:hover  {
+  background-color: #ccc;
+  color: #000;
+  border-color: #aaa;
+}
+.app-tab-panel div  {
+  font-size: 18px;
 }

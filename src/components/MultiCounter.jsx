@@ -20,24 +20,27 @@ var Container = React.createClass({
     var counts = this.state.counts;
     counts[index] += val;
     this.setState({counts: counts});
-   };
+   },
 
   render() {
+    var self = this;
     return (
       <div>
         {
           this.state.counts.map(function(count, index) {
             return (
-              <Counter count={count}
-                onInc={function() { this.onCountChange(index, 1) }}
-                onDec={function() { this.onCountChange(index, -1)}}/>
+              <Counter count={count} key={index}
+                onInc={function() { self.onCountChange(index, 1) }}
+                onDec={function() { self.onCountChange(index, -1) }}/>
             )
           })
         }
-        <button
-          onClick={function() { this.setState({counts: [...this.state.counts, 0]})}} >
-          Add Counter
-        </button>
+        <div style={{borderTop: '2px solid #ccc', padding: '10px 0px'}}>
+          <button
+            onClick={() => this.setState({counts: [...this.state.counts, 0]})} >
+            Add Counter
+          </button>
+        </div>
       </div>
     );
   }

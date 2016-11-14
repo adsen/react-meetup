@@ -35,10 +35,12 @@ var MultiCounterStateful = React.createClass({
     }
     return <div>
       {counterElems}
-      <button
-        onClick={this.onAddCounter} >
-        Add Counter
-      </button>
+      <div style={{borderTop: '2px solid #ccc'}}>
+        <button
+          onClick={this.onAddCounter} >
+          Add Counter
+        </button>
+      </div>
     </div>;
   }
 });

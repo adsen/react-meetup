@@ -18,11 +18,12 @@ var SortNames = React.createClass({
   },
 
   render: function() {
+    var self = this;
     return (
       <div>
         {
           this.state.names.map(function(name, i){
-            return <input key={i} type="text" value={name} placeholder="Name" onChange={(e) => this.handleChange(e, i)}/>;
+            return <input key={i} type="text" value={name} placeholder="Name" onChange={function(e) { self.handleChange(e, i); }}/>;
           })
         }
         <br/><br/><div>
