@@ -1,10 +1,14 @@
 # Welcome to the Bangalore JavaScript Meetup, React Edition!
 
-##### Here are the code samples and exercises used in the meetup
+##### Here are the code samples and exercises used in the meetup.
 
-*To run the code, run `npm start` from the root directory of the repo. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.*
+*To setup, clone the repo, and execute `npm install`.*
+
+*To run the examples, run `npm start`.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.*
 
 
+---
 The repo is structured as below:
 
   - Branch `master` contains only the shell of the application to bootstrap your development. Edit the components located in `src/components` to start hacking!
