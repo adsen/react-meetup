@@ -7,6 +7,7 @@
 *To run the examples, run `npm start`.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.*
 
+*Download the React dev-tools for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) for an awesome debugging experience.*
 
 ---
 The repo is structured as below:
